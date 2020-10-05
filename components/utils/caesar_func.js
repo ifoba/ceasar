@@ -6,7 +6,7 @@ const caesar_func = (action, shift, text) => {
   const a = shift > 0 ? shift % length : 0;
   const b = action === "encode" ? a : -a;
   const res = arr.map((el) => {
-    const index = alph.indexOf(el, 0);
+    const index = alph.indexOf(el.toLowerCase(), 0);
     if (index !== -1) {
       const check =
         index + b > length - 1
@@ -14,7 +14,7 @@ const caesar_func = (action, shift, text) => {
           : index + b < 0
           ? length - index + b
           : index + b;
-      return alph[check];
+      return (el === el.toLowerCase()) ? alph[check] : alph[check].toUpperCase();
     } else return el;
   });
   return res.join("");

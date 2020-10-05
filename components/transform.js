@@ -6,12 +6,6 @@ const { shift } = require("./utils/const");
 const transform_stream = (action, shift) => {
   return new Transform({
     transform(chunk, encoding, callback) {
-      /* const res =
-        chunk
-          .toString()
-          .split("")
-          .map((el) => el.toUpperCase())
-          .join("") + "\n"; */
       const res = caesar_func(action, shift, chunk.toString());
       this.push(res);
       callback();

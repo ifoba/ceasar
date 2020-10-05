@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { pipeline } = require("stream");
-const validate = require('./components/utils/validate')
+const validate = require("./components/utils/validate");
 const transform = require("./components/transform");
 const { input, output, shift, action } = require("./components/commander")();
 
