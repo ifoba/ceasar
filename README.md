@@ -1,3 +1,5 @@
+Проверяющему, посмотри по истории коммитов, я слегка неправильно писал имя Цезаря и запушил папку с модулями. Коммиты после дедлайна связаны именно с этим. 
+
 # My Caesar CLI
 To run the application
 ```sh
@@ -5,7 +7,7 @@ $ git clone *this repository*
 ```
 Then change directory 
 ```sh
-$ cd ceasar
+$ cd caesar
 ```
 Then install the required dependencies
 ```sh
