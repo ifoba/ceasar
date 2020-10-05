@@ -9,6 +9,7 @@ const transform_stream = new Transform({
           .map((el) => el.toUpperCase())
           .join("") + "\n";
       this.push(res);
+      callback();
     },
   });
 
