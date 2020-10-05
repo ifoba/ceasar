@@ -13,7 +13,7 @@ const write_stream = output
   ? fs.createWriteStream(path.join(__dirname, output), { flags: "a+" })
   : process.stdout;
 
-pipeline(read_stream, transform, write_stream, (err) => {
+pipeline(read_stream, transform(action, shift), write_stream, (err) => {
   if (err) {
     console.error("Decode failed", err);
   } else {

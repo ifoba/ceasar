@@ -1,6 +1,8 @@
 const fs = require("fs");
 
 const validateArg = (input, output, shift, action) => {
+  console.log(shift)
+  console.log(action)
     if (!action || !shift) {
         process.stderr;
         console.error("action and shift is required arguments");
