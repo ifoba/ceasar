@@ -1,9 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 const { pipeline } = require("stream");
-const validate = require("./ceasar/components/utils/validate");
-const transform = require("./ceasar/components/transform");
-const { input, output, shift, action } = require("./ceasar/components/commander")();
+const validate = require("./caesar/components/utils/validate");
+const transform = require("./caesar/components/transform");
+const { input, output, shift, action } = require("./caesar/components/commander")();
 
 validate(input, output, shift, action);
 const read_stream = input
